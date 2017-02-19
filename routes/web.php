@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', 'HomeController@getHome');
+
+Route::get('auth/login', 'HomeController@getHome');
+
+/*Route::get('logout', 'HomeController.php@getHome');*/
+
+Route::get('catalog', 'CatalogController@getIndex');
+
+Route::get('catalog/index', 'CatalogController@getIndex');
+
+Route::get('catalog/show/{id}', 'CatalogController@getShow');
+
+Route::get('catalog/create', 'CatalogController@getCreate');
+
+Route::get('catalog/edit/{id}', 'CatalogController@getEdit');
